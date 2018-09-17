@@ -1,0 +1,75 @@
+$ bbl down
+Are you sure you want to delete infrastructure for "bbl-env-caspian-2018-09-11t05-25z"? This operation cannot be undone! (y/N): y
+step: destroying bosh director
+Deployment manifest: '/home/yclian/Development/github.com/yclian/hello-bosh/bosh-deployment/bosh.yml'
+Deployment state: '/home/yclian/Development/github.com/yclian/hello-bosh/vars/bosh-state.json'
+
+Started validating
+  Downloading release 'bosh-aws-cpi'... Skipped [Found in local cache] (00:00:00)
+  Validating release 'bosh-aws-cpi'... Finished (00:00:00)
+  Validating cpi release... Finished (00:00:00)
+Finished validating (00:00:00)
+
+Started installing CPI
+  Compiling package 'ruby-2.4-r4/0cdc60ed7fdb326e605479e9275346200af30a25'... Finished (00:00:00)
+  Compiling package 'bosh_aws_cpi/cd574ff84f900fbb3cb6c302c043e4c2e69941e9'... Finished (00:00:00)
+  Installing packages... Finished (00:00:00)
+  Rendering job templates... Finished (00:00:00)
+  Installing job 'aws_cpi'... Finished (00:00:00)
+Finished installing CPI (00:00:01)
+
+Starting registry... Finished (00:00:00)
+
+Started deleting deployment
+  Waiting for the agent on VM 'i-0c03c689daaace560'... Finished (00:00:05)
+  Stopping jobs on instance 'unknown/0'... Finished (00:00:03)
+  Unmounting disk 'vol-0401508b3dad5bd18'... Finished (00:00:05)
+  Deleting VM 'i-0c03c689daaace560'... Finished (00:00:39)
+  Deleting disk 'vol-0401508b3dad5bd18'... Finished (00:00:04)
+  Deleting stemcell 'ami-0904e1b7de16794a9'... Finished (00:00:06)
+Finished deleting deployment (00:01:25)
+
+Uninstalling local artifacts for CPI and deployment... Finished (00:00:00)
+Stopping registry... Finished (00:00:00)
+Cleaning up rendered CPI jobs... Finished (00:00:00)
+
+Succeeded
+step: destroying jumpbox
+Deployment manifest: '/home/yclian/Development/github.com/yclian/hello-bosh/jumpbox-deployment/jumpbox.yml'
+Deployment state: '/home/yclian/Development/github.com/yclian/hello-bosh/vars/jumpbox-state.json'
+
+Started validating
+  Downloading release 'bosh-aws-cpi'... Skipped [Found in local cache] (00:00:00)
+  Validating release 'bosh-aws-cpi'... Finished (00:00:00)
+  Validating cpi release... Finished (00:00:00)
+Finished validating (00:00:00)
+
+Started installing CPI
+  Compiling package 'ruby-2.4-r3/8471dec5da9ecc321686b8990a5ad2cc84529254'... Finished (00:00:00)
+  Compiling package 'bosh_aws_cpi/a67efa0a30b5df5bf8c88d7bcfe880f8cab0dc34'... Finished (00:00:00)
+  Installing packages... Finished (00:00:00)
+  Rendering job templates... Finished (00:00:00)
+  Installing job 'aws_cpi'... Finished (00:00:00)
+Finished installing CPI (00:00:00)
+
+Starting registry... Finished (00:00:00)
+
+Started deleting deployment
+  Waiting for the agent on VM 'i-04140a114fa2e1f99'... Finished (00:00:05)
+  Stopping jobs on instance 'unknown/0'... Finished (00:00:03)
+  Deleting VM 'i-04140a114fa2e1f99'... Finished (00:01:16)
+  Deleting stemcell 'ami-6967d011 light'... Finished (00:00:06)
+Finished deleting deployment (00:01:53)
+
+Uninstalling local artifacts for CPI and deployment... Finished (00:00:00)
+Stopping registry... Finished (00:00:00)
+Cleaning up rendered CPI jobs... Finished (00:00:00)
+
+Succeeded
+step: generating terraform template
+step: generating terraform variables
+step: terraform init
+step: terraform destroy
+
+
+Executor destroy: Some output has been redacted, use `bbl latest-error` to see it or run again with --debug for additional debug output
